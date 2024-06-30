@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет {{ request.user.username }}</title>
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800&amp;family=Big+Shoulders+Text:wght@100;200;400;500;600;700;800;900&amp;family=Epilogue:wght@400;500;600;700&amp;family=Farro:wght@300;400;500;700&amp;family=Inter:wght@200;300;500;600;700;800&amp;family=Josefin+Sans:wght@200;300;400;600;700&amp;family=Merriweather+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@100;200;300;400;500;600;700;800&amp;family=Prompt:wght@100;200;300;400;500;600;700;800&amp;family=Rubik:wght@300;400;500;600;700&amp;family=Shadows+Into+Light&amp;family=Work+Sans:wght@100&amp;display=swap" rel="stylesheet">
+
+    <link href="{% static 'main/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/style.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/user_page.css' %}">
+
+</head>
+<body>
+    {% include 'main/header.html' %}
+    <div class="container-user">
+        <aside class="sidebar">
+            <div class="user-info">
+                <h2>Информация о пользователе</h2>
+                <p><strong>Имя пользователя:</strong> {{ request.user.username }}</p>
+                {% if request.user.first_name %}<p><strong>Имя:</strong> {{ request.user.first_name }}</p>{% endif %}
+                {% if request.user.last_name %}<p><strong>Фамилия:</strong> {{ request.user.last_name }}</p>{% endif %}
+                {% if request.user.otchestvo %}<p><strong>Отчество:</strong> {{ request.user.otchestvo }}</p>{% endif %}
+                {% if request.user.email %}<p><strong>Email:</strong> {{ request.user.email }}</p>{% endif %}
+            </div>
+        </aside>
+        <main class="content">
+            <h2>Изменение данных пользователя</h2>
+            <form class="user-form" action="{% url 'main:user_page' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <button type="submit">Сохранить изменения</button>
+            </form>
+        </main>
+    </div>
+    {% include 'main/footer.html' %}
+</body>
+
+<script>
+let password = document.querySelector('div[id="id_password_helptext"]')
+password.parentElement.remove()
+</script>
+
+</html>

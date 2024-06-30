@@ -1,0 +1,122 @@
+{% load static %}
+<header class="float-start w-100">
+    <div class="top-header01">
+      
+     <nav class="navbar navbar-expand-lg navbar-light">
+       <div class="container">
+         <a class="navbar-brand" href="{% url 'main:home' %}">
+           <img alt="sr" src="{% static 'main/images/logo-m.png' %}" height="100" width="100">
+         </a>
+         <div class="right-menu-rd d-flex d-lg-none">
+ 
+           <div class="d-flex align-items-center">
+             <a data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-login">Login</a>
+             <a data-bs-toggle="modal" data-bs-target="#registerModal" class="btn btn-partners ms-1 ms-sm-3">Start Free</a>
+           </div>
+           <button class="navbar-toggler border-0 p-0 ms-2 ms-sm-4 ms-lg-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu">
+             <i class="fas fa-bars"></i>
+           </button>
+         </div>
+         
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+             
+           
+         <li class="nav-item">
+             <a class="nav-link" href="{% url 'main:user_page' %}">Мой кабинет</a>
+             </li>
+ 
+             <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                   Меню
+                 </a>
+                 <ul class="dropdown-menu dropdown-menu1">
+                  {% if request.user.is_superuser %}
+                    <li>
+                      <a class="dropdown-item" href="{% url 'admin:index' %}">
+                        <span class="imo-icon">
+                          <img alt="sr" class="mi-icon" src="{% static 'main/images/admin.png' %}">
+                          <img alt="sr" class="mi-icon2" src="{% static 'main/images/admin.png' %}">
+                        </span>
+                        <span>
+                          Админ панель
+                        </span>
+                        </a>
+                    </li>
+                  {% endif %}
+                   <li>
+                     <a class="dropdown-item" href="{% url 'main:application' %}">
+                       <span class="imo-icon">
+                         <img alt="sr" class="mi-icon" src="{% static 'main/images/8531896.png' %}">
+                         <img alt="sr" class="mi-icon2" src="{% static 'main/images/8531896-h.png' %}">
+                       </span>
+                       <span>
+                          Заявка на оружее
+                       </span>
+                       </a>
+                   </li>
+   
+                 </ul>
+             </li>
+
+             <li class="nav-item">
+                 <a class="nav-link" href="{% url 'products:orders' %}">Мои покупки</a>
+             </li>
+ 
+             <li class="nav-item">
+                 <a class="nav-link" href="{% url 'products:products' %}">Товары</a>
+             </li>
+            
+           </ul>
+           <form class="d-flex ms-3" method="GET" action="{% url 'products:search' %}">
+              <input class="form-control me-2 search-input" type="search" placeholder="Поиск товаров" aria-label="Search" name="q">
+              <button class="btn btn-outline-success" type="submit">Поиск</button>
+           </form>
+
+         </div>
+ 
+         
+         <div class="right-menu-rd d-none d-lg-block">
+             <ul class="solinu-links d-flex align-items-center">
+                 <li class="dropdown position-relative ms-3">
+                    <button onclick="window.location.href = '{% url 'products:cart' %}'" class="btn comon-top-right-a" type="button" data-bs-toggle="dropdown">
+                        <span class="icouj">
+                          <img alt="sy" src="{% static 'main/images/2169842.png' %}">
+                        </span>
+                        {% if request.user.is_authenticated %}
+                          <span class="nubn">{{ request.user.cart.count }}</span>
+                        {% endif %}
+                    </button>
+
+                 </li>
+                  {% if request.user.is_authenticated %}
+                      <li>
+                          <a href="{% url 'main:logout' %}" class="btn comon-top-right-a ms-2">
+                          <span class="icouj">
+                              <img alt="sy" src="{% static 'main/images/exit.png' %}">
+                          </span>
+                          </a>                 
+                      </li>
+                  {% else %}
+                      <li>
+                          <a href="{% url 'main:login' %}" class="btn comon-top-right-a ms-2">
+                          <span class="icouj">
+                              <img alt="sy" src="{% static 'main/images/9706624.png' %}">
+                          </span>
+                          </a>                 
+                      </li>
+                  {% endif %}
+                 <li>
+                   <a href="{% url 'main:places' 'all' %}" class="btn btn-partners ms-2">Забронируй свою охоту</a>
+                 </li>
+
+               
+             </ul>
+         </div>
+ 
+       </div>
+     </nav>
+       
+    </div>
+  
+ </header>

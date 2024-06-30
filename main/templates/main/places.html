@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Места для рыбалки/охоты в {{ places.0.location }}</title>
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800&amp;family=Big+Shoulders+Text:wght@100;200;400;500;600;700;800;900&amp;family=Epilogue:wght@400;500;600;700&amp;family=Farro:wght@300;400;500;700&amp;family=Inter:wght@200;300;500;600;700;800&amp;family=Josefin+Sans:wght@200;300;400;600;700&amp;family=Merriweather+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@100;200;300;400;500;600;700;800&amp;family=Prompt:wght@100;200;300;400;500;600;700;800&amp;family=Rubik:wght@300;400;500;600;700&amp;family=Shadows+Into+Light&amp;family=Work+Sans:wght@100&amp;display=swap" rel="stylesheet">
+
+    <link href="{% static 'main/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/style.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/places.css' %}">
+
+</head>
+<body>
+
+<div class="root">
+    {% include 'main/header.html' %}
+
+    <div class="container-places">
+        {% for place in places %}
+            <div class="fishing-place">
+                <img src="{{ place.image.url }}" class="fishing-place-image">
+                <div class="fishing-place-details">
+                    <h2>{{ place.name }}</h2>
+                    <p><strong>Цена за бронирование:</strong> {{ place.price }} руб.</p>
+                    <p><strong>Описание:</strong> {{ place.location }}</p>
+                    <p><strong>Тип места:</strong> {{ place.place_type }}</p>
+                    <p><strong>Обитатели:</strong> {{ place.inhabiants }}</p>
+                    <a href="{% url 'main:book' pk=place.id %}" class="rent-button">Арендовать это место</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include 'main/footer.html' %}
+</div>
+
+</body>
+</html>

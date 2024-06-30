@@ -1,0 +1,61 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-places {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
+}
+
+.fishing-place {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fishing-place h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.fishing-place-image {
+    width: 100%;
+    height: 20em;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.fishing-place-details {
+    padding: 10px;
+}
+
+.fishing-place-details p {
+    margin: 5px 0;
+}
+
+.rent-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.rent-button:hover {
+    background-color: #e55d00;
+}

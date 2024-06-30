@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список товаров</title>
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800&amp;family=Big+Shoulders+Text:wght@100;200;400;500;600;700;800;900&amp;family=Epilogue:wght@400;500;600;700&amp;family=Farro:wght@300;400;500;700&amp;family=Inter:wght@200;300;500;600;700;800&amp;family=Josefin+Sans:wght@200;300;400;600;700&amp;family=Merriweather+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@100;200;300;400;500;600;700;800&amp;family=Prompt:wght@100;200;300;400;500;600;700;800&amp;family=Rubik:wght@300;400;500;600;700&amp;family=Shadows+Into+Light&amp;family=Work+Sans:wght@100&amp;display=swap" rel="stylesheet">
+
+    <link href="{% static 'main/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/style.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+</head>
+<body>
+    {% include 'main/header.html' %}
+    <main>
+        <section class="product-list">
+            {% for product in products %}
+                <div class="product-card">
+                    <img src="{{ product.image.url }}" alt="Товар 1">
+                    <h2>{{ product.name }}</h2>
+                    <p class="price">{{ product.price }}₽</p>
+                    <p class="description">{{ product.desc }}</p>
+                    <button onclick="window.location.href = '{% url 'products:add_product' product.pk %}'" class="add-to-cart">Добавить в корзину</button>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+
+
+<script src="{% static 'main/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'main/js/jquery.min.js' %}"></script>
+<script src="{% static 'main/js/custom.js' %}"></script>
+<script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'products/js/commons.js' %}"></script>
+<script src="{% static 'products/js/demo.js' %}"></script>
+
+
+
+{% include 'main/footer.html' %}
+
+</html>

@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800&amp;family=Big+Shoulders+Text:wght@100;200;400;500;600;700;800;900&amp;family=Epilogue:wght@400;500;600;700&amp;family=Farro:wght@300;400;500;700&amp;family=Inter:wght@200;300;500;600;700;800&amp;family=Josefin+Sans:wght@200;300;400;600;700&amp;family=Merriweather+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@100;200;300;400;500;600;700;800&amp;family=Prompt:wght@100;200;300;400;500;600;700;800&amp;family=Rubik:wght@300;400;500;600;700&amp;family=Shadows+Into+Light&amp;family=Work+Sans:wght@100&amp;display=swap" rel="stylesheet">
+
+    <link href="{% static 'main/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/style.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'products/css/cart.css' %}">
+</head>
+<body>
+
+<div class="page" style="display: flex; flex-direction: column; min-height: 100vh; justify-content: space-between;">
+    {% include 'main/header.html' %}
+
+    {% if products %}
+        <div class="favorites-block high-element" style="width: 95vw;">
+            <div class="favorites-list">
+                <div class="favorites-controls">
+                    <div class="default-checkbox">
+                        <input type="checkbox" checked class="default-checkbox" id="select-all-checkbox">
+                        <label for="select-all-checkbox">Выбрать все</label>
+                    </div>
+                    <div class="delete-button" id="delete-all-button">
+                        <img src="{% static 'products/images/x.png' %}" class="delete-icon">
+                        <span class="delete-button-text">Удалить все</span>
+                    </div>
+                </div>
+
+                <div class="favorites">
+                    {% for product in products %}
+                        <div style="border-color: black; border: 1px solid;" class="favorite" data-objectid="{{ product.pk }}">
+                            <div><img class="favorite-img letter-img" src="{{ product.image.url }}"></div>
+                            <div class="favorite-content">
+                                <div class="favorite-content-text">
+                                    <span>{{ product.name }}</span>
+                                    <span class="second-favorite-text">{{ product.desc }}</span>
+                                </div>
+                                <div class="favorite-el-controls">
+                                    <div class="default-checkbox">
+                                        <input type="checkbox" checked name="letter-checkbox" id="letter-checkbox{{ product.pk }}">
+                                        <label for="letter-checkbox{{ product.pk }}"></label>
+                                    </div>
+                                    <div class="delete-button delete-favorite">
+                                        <img src="{% static 'products/images/x.png' %}" class="delete-icon">
+                                        <a href="{% url 'products:delete_from_cart' pk=product.pk %}" class="delete-button-text">Удалить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="select-all">
+                <div class="select-all-container">
+                    <button onclick="window.location.href = '{% url 'products:do_order' %}'" class="default-button select-all-button">Заказать</button>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="empty-text-container">
+            <div class="empty-objects-text block-container">
+                <img src="{% static 'products/images/delbox.png' %}" style="height: 100px; width: 100px; margin-top: 100px; margin-left: 600px;">
+                <p style="text-align: center; margin-top: 20px;">
+                    Вам нужно войти и выбрать продукты, чтобы они появились в корзине
+                </p>
+            </div>
+        </div>
+    {% endif %}
+
+    {% include 'main/footer.html' %}
+
+</div>
+
+<script src="{% static 'products/js/cart.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,543 @@
+{% load static %}
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="marhansolutions.com">
+    <title>Медведь и Щука</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500;700;800&amp;family=Big+Shoulders+Text:wght@100;200;400;500;600;700;800;900&amp;family=Epilogue:wght@400;500;600;700&amp;family=Farro:wght@300;400;500;700&amp;family=Inter:wght@200;300;500;600;700;800&amp;family=Josefin+Sans:wght@200;300;400;600;700&amp;family=Merriweather+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@100;200;300;400;500;600;700;800&amp;family=Prompt:wght@100;200;300;400;500;600;700;800&amp;family=Rubik:wght@300;400;500;600;700&amp;family=Shadows+Into+Light&amp;family=Work+Sans:wght@100&amp;display=swap" rel="stylesheet">
+
+    <link href="{% static 'main/css/all.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/style.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/owl.theme.default.min.css' %}">
+  </head>
+
+<body>
+
+    <div>
+      {% include 'main/header.html' %}
+       
+       
+       <section class="banner-part float-start w-100">
+           
+         <div class="slider-div owl-carousel owl-theme owl-loaded owl-drag">
+
+         <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-4026px, 0px, 0px); transition: all 0s ease 0s; width: 9394px;"><div class="owl-item animated owl-animated-in fadeIn cloned" style="width: 1342px;"><div class="items-sliders">
+               <div class="container">
+                   <div class="items-text01">
+                     <h6 class="text-white">  {{ header_title }} </h6>
+                     <h2> Место для душевной <br>
+                       рыбалки </h2>
+                       <div class="d-block button-divu w-100 mt-3">
+                         <a href="#" class="btn btn-about mx-auto justify-content-center">
+                           <span>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                               <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                             </svg>
+                           </span>
+                          Связаться с нами</a>
+                       </div>
+                   </div>
+               </div>
+       
+               <figure>
+                 <img alt="sy" src="{% static 'main/images/banner03.jpg' %}">
+                </figure>
+             </div></div><div class="owl-item animated owl-animated-in fadeIn cloned" style="width: 1342px;"><div class="items-sliders">
+               <div class="container">
+                   <div class="items-text01">
+                     <h6 class="text-white">  {{ header_title  }} </h6>
+                     <h2> Отличный лес <br>
+                       Для кемпинга </h2>
+                       <div class="d-block button-divu w-100 mt-3">
+                         <a href="{% url 'main:places' 'all' %}" class="btn btn-about mx-auto justify-content-center">
+                           <span>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                               <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                             </svg>
+                           </span>
+                         Забронировать сейчас</a>
+                       </div>
+                   </div>
+               </div>
+       
+               <figure>
+                <img alt="sy" src="{% static 'main/images/banner01.jpg' %}">
+               </figure>
+             </div></div><div class="owl-item animated owl-animated-in fadeIn" style="width: 1342px;"><div class="items-sliders">
+               <div class="container">
+                   <div class="items-text01">
+                      <h6>  {{ header_title  }} </h6>
+                      <h2> Место для душевной <br>
+                       рыбалки </h2>
+       
+                        <div class="d-block button-divu w-100 mt-3">
+                         <a href="#" class="btn btn-about mx-auto justify-content-center">
+                           <span>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                               <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                             </svg>
+                           </span>
+                          Связаться с Нами</a>
+                       </div>
+                      
+                   </div>
+               </div>
+       
+               <figure>
+                 <img alt="sy" src="{% static 'main/images/banner03.jpg' %}">
+                </figure>
+             </div></div><div class="owl-item animated owl-animated-in fadeIn" style="width: 1342px;"><div class="items-sliders">
+               <div class="container">
+                   <div class="items-text01">
+                     <h6 class="text-white">  {{ header_title }} </h6>
+                     <h2> Отличный лес <br>
+                       Для кемпинга </h2>
+                       <div class="d-block button-divu w-100 mt-3">
+                         <a href="{% url 'main:places' 'all' %}" class="btn btn-about mx-auto justify-content-center">
+                           <span>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                               <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                             </svg>
+                           </span>
+                         Забронировать</a>
+                       </div>
+                   </div>
+               </div>
+       
+               <figure>
+                <img alt="sy" src="{% static 'main/images/banner01.jpg' %}">
+               </figure>
+             </div></div><div class="owl-item animated owl-animated-in fadeIn cloned" style="width: 1342px;"><div class="items-sliders">
+               <div class="container">
+                   <div class="items-text01">
+                      <h6>  {{ header_title }} </h6>
+                      <h2> Узнай о охоте на Оленей <br>
+                         </h2>
+       
+                        <div class="d-block button-divu w-100 mt-3">
+                         <a href="#" class="btn btn-about mx-auto justify-content-center">
+                           <span>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                               <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                             </svg>
+                           </span>
+                           Связаться с нами</a>
+                       </div>
+                      
+                   </div>
+               </div>
+       
+              
+               <figure>
+                 <img alt="sy" src="{% static 'main/images/banner02.jpg' %}">
+                </figure>
+             </div></div><div class="owl-item animated owl-animated-in fadeIn cloned" style="width: 1342px;"><div class="items-sliders">
+               <div class="container">
+                   <div class="items-text01">
+                     <h6 class="text-white">  {{ header_title }} </h6>
+                     <h2> Место с утками <br>
+                        </h2>
+                       <div class="d-block button-divu w-100 mt-3">
+                         <a href="#" class="btn btn-about mx-auto justify-content-center">
+                           <span>
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                               <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                             </svg>
+                           </span>
+                          Связаться с нами</a>
+                       </div>
+                   </div>
+               </div>
+       
+               <figure>
+                 <img alt="sy" src="{% static 'main/images/banner03.jpg' %}">
+                </figure>
+             </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
+        
+       </section>
+       
+       <main class="float-start w-100">
+       
+           <section class="about-section-home float-start w-100">
+             <div class="about-svg">
+                <img alt="se" src="{% static 'main/images/edge1-d.svg' %}">
+             </div>
+               <div class="container">
+                  <div class="row row-cols-1 row-cols-md-2 g-5 align-items-center">
+                     <div class="col">
+                        <figure class="m-0">
+                          <img alt="ser" src="{% static 'main/images/about-img-1.png' %}">
+                        </figure>
+                     </div>
+                     <div class="col">
+                       <h6 class="sub-text"> Представление </h6>
+                       <h2 class="comon-heding"> Охоться умело,
+                        <span class="d-sm-block"> С гидом - Экспертом! </span> </h2>
+                        <p class="mt-3">Добро пожаловать на сайт “Медведь и щука” - ваш надежный помощник в мире охоты и рыбалки! Мы предлагаем широкий ассортимент товаров для охоты и рыбалки, чтобы ваш отдых был комфортным, успешным и запоминающимся: охотничье оружие и снаряжение, рыболовные снасти, товары для активного отдыха. Выбирайте продукцию от ведущих мировых брендов с гарантией качества и оригинальности, по доступным ценам и с регулярными акциями. Удобная система онлайн-заказа и доставки, а также опытные консультанты, всегда готовые помочь с выбором, сделают ваш отдых по-настоящему ярким. Забронируйте место для охоты или рыбалки прямо сейчас - с “Медведь и щука” у вас будет все, что нужно для успешной охоты и рыбалки!</p>
+                           <div class="d-block button-divu w-100 mt-3">
+                             <a href="#" class="btn btn-about mx-auto justify-content-center">
+                               <span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                   <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                                 </svg>
+                               </span>
+                              Больше о нас</a>
+                           </div>
+                     </div>
+                  </div>
+               </div>
+       
+               <div class="about-svg-02">
+                 <img alt="se" src="{% static 'main/images/edge1-d.svg' %}">
+              </div>
+           </section>
+           <section class="offer-div-services float-start w-100">
+              <div class="container">
+                 <h6 class="sub-text text-center"> Медведь и Щука </h6>
+                 <h2 class="comon-heding text-center mt-3 text-white"> Популярные места для охоты</h2>
+                 <p class="col-lg-6 mt-3 mx-auto po-para text-center">
+                   Мы имеем провереные места для охоты по всему миру 
+                 </p>
+                 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5 mt-0">
+                     <div class="col">
+                        <a href="{% url 'main:places' location='br' %}" class="items-section-ser d-inline-block w-100">
+                           <div class="img-hunting">
+                              <img alt="hunting" src="{% static 'main/images/huting01.jpg' %}">
+                           </div>
+                           <div class="text-hurt mt-3">
+                              <h5>  Базилия <span class="btn plo"> {{ br_count }} Мест </span> </h5>
+                              
+                              <h6 class="btn mt-2">
+                               <span>
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                 </svg>
+                               </span>
+                                Забронировать </h6>
+                           </div>
+                        </a>
+                     </div>
+       
+                     <div class="col">
+                       <a href="{% url 'main:places' location='it' %}" class="items-section-ser d-inline-block w-100">
+                          <div class="img-hunting">
+                             <img alt="hunting" src="{% static 'main/images/shutterstock_10458418693-scaled.jpg' %}">
+                          </div>
+                          <div class="text-hurt mt-3">
+                             <h5> Италия <span class="btn plo"> {{ it_count }} Мест </span> </h5>
+                             
+                             <h6 class="btn mt-2">
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                </svg>
+                              </span>
+                              Забронировать </h6>
+                          </div>
+                       </a>
+                     </div>
+       
+                     <div class="col">
+                       <a href="{% url 'main:places' location='ru' %}" class="items-section-ser d-inline-block w-100">
+                          <div class="img-hunting">
+                             <img alt="hunting" src="{% static 'main/images/pexels-photo-14701995.jpeg' %}">
+                          </div>
+                          <div class="text-hurt mt-3">
+                             <h5> 
+                               Россия <span class="btn plo"> {{ ru_count }} Мест </span> </h5>
+                             
+                             <h6 class="btn mt-2">
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                </svg>
+                              </span>
+                               Узнать больше </h6>
+                          </div>
+                       </a>
+                     </div>
+       
+       
+                     <div class="col">
+                       <a href="{% url 'main:places' location='kn' %}" class="items-section-ser d-inline-block w-100">
+                          <div class="img-hunting">
+                             <img alt="hunting" src="{% static 'main/images/offset_1045624.jpg' %}">
+                          </div>
+                          <div class="text-hurt mt-3">
+                             <h5> 
+                               Кения <span class="btn plo"> {{ kn_count }} Мест </span> </h5>
+                             
+                             <h6 class="btn mt-2">
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                </svg>
+                              </span>
+                              Забронировать </h6>
+                          </div>
+                       </a>
+                     </div>
+       
+       
+                     <div class="col">
+                       <a href="{% url 'main:places' location='nz' %}" class="items-section-ser d-inline-block w-100">
+                          <div class="img-hunting">
+                             <img alt="hunting" src="{% static 'main/images/19371624098238.jpg' %}">
+                          </div>
+                          <div class="text-hurt mt-3">
+                             <h5> 
+                               Новая Зеландия <span class="btn plo"> {{ nz_count }} Мест </span> </h5>
+                             
+                             <h6 class="btn mt-2">
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                </svg>
+                              </span>
+                              Забронировать </h6>
+                          </div>
+                       </a>
+                     </div>
+       
+       
+                     <div class="col">
+                       <a href="{% url 'main:places' location='zb' %}" class="items-section-ser d-inline-block w-100">
+                          <div class="img-hunting">
+                             <img alt="hunting" src="{% static 'main/images/pexels-photo-14701995.jpeg' %}">
+                          </div>
+                          <div class="text-hurt mt-3">
+                             <h5> 
+                               Зимбабве <span class="btn plo"> {{ zb_count }} Мест </span> </h5>
+                             
+                             <h6 class="btn mt-2">
+                              <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                                </svg>
+                              </span>
+                              Забронировать </h6>
+                          </div>
+                       </a>
+                     </div>
+       
+                 </div>
+       
+                 <div class="text-center d-block w-100 mt-5">
+                   <a href="{% url 'main:places' location='all' %}" class="btn btn-about mx-auto justify-content-center mt-5">
+                     <span>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                         <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                       </svg>
+                     </span>
+                    Все направления</a>
+                 </div>
+       
+                
+              </div>
+           </section>
+       
+           <section class="shop-section position-relative float-start w-100">
+             <div class="about-svg">
+               <img alt="se" src="{% static 'main/images/edge1-d.svg' %}">
+            </div>
+               <div class="container">
+                   <h6 class="text-center sub-text">Магазин </h6>
+                   <h2 class="comon-heding text-center mt-3"> Популярные продукты для охоты и рыбалки </h2>
+
+                   <div class="slou-products owl-carousel owl-theme mt-5 owl-loaded owl-drag">
+
+                  {% for product in products %}
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2307px, 0px, 0px); transition: all 0.25s ease 0s; width: 3749px;"><div class="owl-item cloned" style="width: 258.375px; margin-right: 30px;"><div class="comon-offer-part">
+                       <div class="img-box-msn">
+                        <a href="#">
+                          <div class="img05">
+                            <span class="btn">
+                              -20%
+                            </span>
+                            <img src="{{ product.image.url }}" alt="figh">
+                          </div>
+                        </a>
+                        <div class="cart-div-part">
+                           <ul>
+                             <li>
+                               <a href="#" class="whis-list btn">  <i class="far fa-heart"></i> </a>
+                             </li>
+                             <li>
+                               <a href="{% url 'products:add_product' pk=product.pk %}" class="btn btn-cart">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                   <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                                 </svg>
+                               </a>
+                               
+                             </li>
+                           </ul>
+                         </div>
+                       </div>
+                         <div class="content-div text-center">
+                             <h5> {{ product.name }} </h5>
+
+                             <h4> {{ product.price }} руб. </h4>
+                             
+                             
+                         </div>
+                     </div></div><div class="owl-item cloned" style="width: 258.375px; margin-right: 30px;"><div class="comon-offer-part">
+                  {% endfor %}
+                     </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
+       
+              
+       
+               </div>
+       
+               <div class="about-svg-02">
+                 <img alt="se" src="{% static 'main/images/edge1-d.svg' %}">
+              </div>
+           </section>
+       
+           <section class="outing-sections float-start w-100">
+              <div class="container">
+               <div class="row row-cols-1 row-cols-lg-2">
+                  <div class="col">
+                     <figure class="d-none d-lg-block">
+                        <img alt="ser" src="{% static 'main/images/man01.png' %}">
+                     </figure>
+                  </div>
+                  <div class="col">
+                    <h6 class="sub-text"> Исследуйте достопримечательности </h6>
+                    <h2 class="comon-heding mt-3 text-white"> Посетите самые популярные
+                     <span class="d-sm-block">
+                       Охотничье Места
+                     </span>
+                    </h2>
+                    <p class="text-white my-3">Погрузитесь в захватывающий мир охоты и рыбалки, посещая лучшие места для любителей природы. Здесь вы найдете уникальные локации, где обитают редкие виды животных и рыб. Незабываемые приключения и красивые пейзажи ждут вас на каждом шагу.</p>
+                     <a href="#" class="btn btn-adventure mt-3"> Погрузится в приключения </a>
+                  </div>
+               </div>
+                
+              </div>
+           </section>
+       
+           <section class="hunting-pacgaes position-relative float-start w-100">
+             <div class="about-svg">
+               <img alt="se" src="{% static 'main/images/edge1-d.svg' %}">
+             </div>
+               <div class="container">
+                   <h2 class="comon-heding text-center mt-3"> Посмотрите наши лучшие моменты </h2>
+                   <div class="slider-packges owl-carousel owl-theme mt-5 owl-loaded owl-drag">
+
+                   <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2307px, 0px, 0px); transition: all 0.25s ease 0s; width: 3749px;"><div class="owl-item cloned" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/image-asset.jpeg' %}">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Семейная охота </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div><div class="owl-item cloned" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/whitetail-hunting-3-1024x768.jpg' %}">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Охота на Оленей </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div><div class="owl-item cloned" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/501-white-tail-deer-Hunting-Uvalde-15.jpg' %}">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Охота на Красного Оленя </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div>
+                       <div class="owl-item" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                          <div class="img-pahcj position-relative">
+                             <img alt="srt" src="{% static 'main/images/Lead-4.webp' %}">
+                           
+                          </div>
+                          <div class="text-rio">
+                            <h5> Совместная охота </h5>
+                            <p> Наши фотографии </p>
+                          </div>
+                       </a></div><div class="owl-item" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/image-asset.jpeg' %}">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Семейная охота </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div><div class="owl-item" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/whitetail-hunting-3-1024x768.jpg' %}">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Охота на лося </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div><div class="owl-item" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/501-white-tail-deer-Hunting-Uvalde-15.jpg' %}">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Охота на Красного Оленя </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div>
+                       <div class="owl-item cloned active" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                          <div class="img-pahcj position-relative">
+                             <img alt="srt" src="{% static 'main/images/Lead-4.webp' %]">
+                           
+                          </div>
+                          <div class="text-rio">
+                            <h5> Совместная охота </h5>
+                            <p> Наши фотографии </p>
+                          </div>
+                       </a></div><div class="owl-item cloned active" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/image-asset.jpeg' %]">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Семейная охота </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div><div class="owl-item cloned active" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/whitetail-hunting-3-1024x768.jpg' %}">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Охота на лося </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div><div class="owl-item cloned" style="width: 258.375px; margin-right: 30px;"><a href="#" class="items-packges d-inline-block w-100">
+                         <div class="img-pahcj">
+                            <img alt="srt" src="{% static 'main/images/501-white-tail-deer-Hunting-Uvalde-15.jpg' %}">
+                         </div>
+                         <div class="text-rio">
+                           <h5> Охота на Красного Оленя </h5>
+                           <p> Наши фотографии </p>
+                         </div>
+                       </a></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
+               </div>
+           </section>
+
+       </main>
+       {% include 'main/footer.html' %}
+         </div>
+       </div>
+      </div>
+
+
+<script src="{% static 'main/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'main/js/jquery.min.js' %}"></script>
+<script src="{% static 'main/js/custom.js' %}"></script>
+<script src="{% static 'main/js/owl.carousel.min.js' %}"></script>
+
+
+</body></html>
